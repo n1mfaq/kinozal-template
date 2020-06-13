@@ -1,0 +1,122 @@
+.left-sidebar {
+  @extend %margin-bottom-lg;
+}
+
+.vertical-slider {
+  border-radius: 4px;
+  overflow: hidden;
+
+    img {
+      width: 100%;
+    }
+}
+
+.site-news {
+  &-item {
+    position: relative;
+    clear: both;
+
+    &:not(:last-child) {
+      min-height: 85px;
+      margin-bottom: $gap;
+
+      &::after {
+        position: absolute;
+        right: 0;
+        bottom: -5px;
+        width: calc(100% - 85px);
+        height: 1px;
+        content: "";
+        background-color: $color-gray;
+      }
+    }
+
+    &__image {
+      float: left;
+      width: 75px;
+      margin: 0 10px 10px 0;  
+      transition: background-color 0.5s;
+    }
+
+    &__title {
+      margin-bottom: 10px;
+
+      a {
+        transition: color 0.25s;
+        @include block-shortener(1rem, 1.5, 50px, 2);
+      }
+    }
+
+    &__date {
+      text-align: right;
+      font-size: 0.8rem;
+      color: darken($color-gray, 30%);
+    }
+
+    &:hover {
+      .site-news-item__title a {
+        color: $color-accent;
+      }
+
+      .site-news-item__image {
+        background-color: $color-accent;
+        border-color: $color-accent;
+      }
+    }
+  }
+}
+
+.top-films {
+  .panel-body {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .list-group {
+    margin-bottom: 0;
+  }
+
+  .badge {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+  }
+
+  &-item {
+    padding: 0;
+    background-color: transparent;
+    border-top: 1px solid $color-gray;
+    border-right: none;
+    border-left: none;
+    margin-left: -1px;
+    margin-right: -1px;
+
+    a {
+      display: block;
+      padding: 10px 40px 10px $gap;
+    }
+
+    &:first-child {
+      border-top: none;
+      border-radius: 0;
+    }
+
+    &:last-child {
+      border-bottom: none;
+      border-radius: 0;
+    }
+
+    &:hover {
+      background-color: $color-accent;
+
+      a {
+        color: $color-light;
+      }
+
+      .badge {
+        background-color: $color-dark;
+      }
+    }
+  }
+}
