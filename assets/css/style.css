@@ -61,13 +61,20 @@
   border-radius: 0 0 4px 4px;
 }
 
-.panel:last-of-type {
-  margin-bottom: 0;
-}
-
 .input-lg,
 .input-group-lg > .form-control {
   font-size: 0.875rem;
+}
+
+.well {
+  border-color: #dddddd;
+  background-color: #f1f1f1;
+}
+
+.embed-responsive {
+  border: 1px solid #dddddd;
+  border-bottom: none;
+  border-radius: 4px 4px 0 0;
 }
 
 html {
@@ -253,6 +260,31 @@ section {
   -webkit-transition: color 0.25s;
   -o-transition: color 0.25s;
   transition: color 0.25s;
+}
+
+.film-info {
+  font-size: 1.2em;
+}
+
+.film-info__wrapper {
+  white-space: nowrap;
+}
+
+.film-info__wrapper:not(:last-of-type) {
+  margin-right: 15px;
+}
+
+.film-info__badge {
+  font-size: 0.8em;
+}
+
+.film-info__well {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.film-send-comment__button {
+  float: right;
 }
 
 .vertical-slider {
